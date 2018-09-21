@@ -32,6 +32,7 @@ if(atm_getCookie('osatmsod')){ //Cookie que guarda le playerID de Onesignal
         "smc_precio_5" : '$precio_5',
         "smc_cantidad_5" : '$cantidade_5',
         /*otra informacion*/
+        "smcc_fecha_operacion": fecl,
         "smc_add" : '1',
         "smc_checkout" : '1',
         "smc_purchase" : '0',
