@@ -1,7 +1,7 @@
 if(atm_getCookie('osatmsod')){ //Cookie que guarda le playerID de Onesignal
   $.ajax({
     type: "POST",
-    url: 'http://push.app.attachmedia.com/index.php/App/fecha', //Sincroniza fecha real con el servidor
+    url: 'https://push.app.attachmedia.com/index.php/App/fecha', //Sincroniza fecha real con el servidor
     success: function (res) {
       var fecl = new Date(res).getTime();
       playerID = atm_getCookie('osatmsod'); 
@@ -43,7 +43,7 @@ if(atm_getCookie('osatmsod')){ //Cookie que guarda le playerID de Onesignal
       }
       $.ajax({
         type: "POST",
-        url: 'http://push.app.attachmedia.com/index.php/App/savetag?atmtok=aeeace29747db2188e8aec1be356a3d3',//URL Api Sodimac, no modificar atmtok
+        url: 'https://push.app.attachmedia.com/index.php/App/savetag?atmtok=aeeace29747db2188e8aec1be356a3d3',//URL Api Sodimac, no modificar atmtok
         data: {'playerID': playerID,'data':JSON.stringify(onarr)},
         success: function (res) { console.log("Apppush update Tag sucess");},
         error: function(res) {console.log("Apppush update Tag error");}
